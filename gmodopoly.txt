@@ -1,0 +1,20 @@
+"gmodopoly"
+{
+	"base"		"base"
+	"title"		"GMOD-o-Poly"
+	"maps"		"^mo_"
+	"menusystem"	"1"
+	"workshopid" 	""
+	
+	"settings"
+	{
+		1
+		{
+			"name"		"ex_test"
+			"text"		"Test"
+			"help"		"This is a test command"
+			"type"		"numeric"
+			"default"	"1"
+		}
+	}
+}
