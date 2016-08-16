@@ -114,7 +114,6 @@ function getnextPlayer()
 	end
 
 	return table.GetFirstKey(GamePlayers);
-
 	
 end
 
