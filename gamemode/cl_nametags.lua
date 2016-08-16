@@ -6,10 +6,10 @@ local function MESPCheck(v)
 	end
 end
 
-hook.Add("HUDPaint", "L4DGlow", function()
+hook.Add("PreDrawHalos", "L4DGlow", function()
 	for k,v in pairs(player.GetAll()) do
 		if(MESPCheck(v)) then
-			effects.halo.Add({v}, team.GetColor(v:Team()), 1, 1, 5, true, true)
+			halo.Add( {v},  team.GetColor(v:Team()), 1 blurX=1, blurY=5, additive=true, ignoreZ=true )
 		end
 	end
 end)

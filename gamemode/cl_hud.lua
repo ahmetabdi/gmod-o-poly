@@ -7,12 +7,11 @@ hook.Add( "HUDShouldDraw", "HideHUDElements", HideHUDElements )
 surface.CreateFont("Trebuchet19", {font="TabLarge", size=13, weight=700})
 
 local function PaintHUD()
-//Time Variable
-local TimeString = os.date("%I") .. ":" .. os.date("%M") .. " " .. os.date("%p")
-//Textures		
-local Clock  = surface.GetTextureID( "gui/silkicons/user" )
-local Heart  = surface.GetTextureID( "gui/silkicons/heart" )
-local Money = surface.GetTextureID( "gui/silkicons/money" )
+	//Time Variable
+	local TimeString = os.date("%I") .. ":" .. os.date("%M") .. " " .. os.date("%p")
+	local Clock  = Material( "materials/icon16/user.png" )
+	local Heart  = Material( "materials/icon16/heart.png" )
+	local Money = Material( "materials/icon16/money.png" )
 
 	if LocalPlayer():Alive() && LocalPlayer():IsValid() then
 		--Images Area Box
@@ -24,15 +23,15 @@ local Money = surface.GetTextureID( "gui/silkicons/money" )
 		draw.RoundedBox( 0, 26, ScrH() - 41, 78, 17, Color( 0, 0, 0, 200 ) )
 		draw.RoundedBox( 0, 26, ScrH() - 20, 78, 17, Color( 0, 0, 0, 200 ) )
 		--Clock Texture
-		surface.SetTexture( Clock )
+		surface.SetMaterial( Clock )
 		surface.SetDrawColor( 255, 255, 255, 255 )
 		surface.DrawTexturedRect( 6, ScrH() - 62, 16, 16 )	
 		--Heart Texture
-		surface.SetTexture( Heart )
+		surface.SetMaterial( Heart )
 		surface.SetDrawColor( 255, 255, 255, 255 )
 		surface.DrawTexturedRect( 6, ScrH() - 41, 16, 16 )
 		--Money Texture
-		surface.SetTexture( Money )
+		surface.SetMaterial( Money )
 		surface.SetDrawColor( 255, 255, 255, 255 )
 		surface.DrawTexturedRect( 6, ScrH() - 21, 16, 16 )
 		--Time Label
