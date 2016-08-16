@@ -9,7 +9,7 @@ end
 hook.Add("PreDrawHalos", "L4DGlow", function()
 	for k,v in pairs(player.GetAll()) do
 		if(MESPCheck(v)) then
-			halo.Add( {v},  team.GetColor(v:Team()), 1 blurX=1, blurY=5, additive=true, ignoreZ=true )
+			halo.Add( {v},  team.GetColor(v:Team()), 1, 1, 5, true, true )
 		end
 	end
 end)

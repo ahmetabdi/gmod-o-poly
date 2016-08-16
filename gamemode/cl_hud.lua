@@ -45,7 +45,7 @@ local function PaintHUD()
 end
 hook.Add( "HUDPaint", "PaintHUD", PaintHUD )
 
-hook.Add("HUDPaint", "Property", function()
+hook.Add("PreDrawHalos", "Property", function()
 		for _, ent in pairs(ents.GetAll()) do
 				local rpepos = ent:GetPos()
 				if rpepos:ToScreen().x > 0 and
@@ -57,7 +57,7 @@ hook.Add("HUDPaint", "Property", function()
 					local pos = ent:GetPos()
 					
 					if string.find(ent:GetClass(), "prop_physics") then 
-						effects.halo.Add({ent}, Color(255, 255, 255), 1, 1, 1, true, true)
+						halo.Add( {ent}, Color(255, 255, 255), 1, 1, 1, true, true )
 					end
 					
 					
@@ -73,4 +73,3 @@ end)
 
 
 	
-
