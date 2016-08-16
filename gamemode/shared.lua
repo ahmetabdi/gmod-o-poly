@@ -1,5 +1,5 @@
 GM.Name = "Gmodopoly"
-GM.Author = "greenarrow"
+GM.Author = "greenarrow and Bentech"
 GM.Email = "Good luck with that"
 GM.Website = "None"
 
